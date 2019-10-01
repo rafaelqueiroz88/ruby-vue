@@ -1,0 +1,186 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (476.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (683.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to CreatePeople (20191001030242)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "people" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "lastname" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20191001030242_create_people.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191001030242"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (838.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-01 03:02:56.646489"], ["updated_at", "2019-10-01 03:02:56.646489"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (459.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+Started GET "/people" for 127.0.0.1 at 2019-10-01 00:03:15 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.4ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:15
+  Rendered people/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 3394ms (Views: 3369.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-10-01 00:04:07 -0300
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:15
+  Rendered people/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-10-01 00:05:37 -0300
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:15
+  Rendered people/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 37ms (Views: 35.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-10-01 00:07:22 -0300
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.3ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:15
+  Rendered people/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-10-01 00:09:32 -0300
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.8ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:15
+  Rendered people/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 177ms (Views: 172.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-10-01 00:10:12 -0300
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.1ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:15
+  Rendered people/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-10-01 00:13:25 -0300
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:15
+  Rendered people/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 65ms (Views: 63.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-10-01 00:14:02 -0300
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.1ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:15
+  Rendered people/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-10-01 00:14:32 -0300
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.3ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:15
+  Rendered people/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 86ms (Views: 83.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-10-01 00:14:37 -0300
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.8ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:15
+  Rendered people/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 42ms (Views: 38.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-10-01 00:14:53 -0300
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.1ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:15
+  Rendered people/index.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 637ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'App.vue' with type 'application/javascript'
+Checked in these paths: 
+  /home/rafael/Documentos/Desenvolvimento/ruby-vue/app/assets/config
+  /home/rafael/Documentos/Desenvolvimento/ruby-vue/app/assets/images
+  /home/rafael/Documentos/Desenvolvimento/ruby-vue/app/assets/javascripts
+  /home/rafael/Documentos/Desenvolvimento/ruby-vue/app/assets/stylesheets
+  /var/lib/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /var/lib/gems/2.5.0/gems/actioncable-5.2.3/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/activestorage-5.2.3/app/assets/javascripts
+  /var/lib/gems/2.5.0/gems/actionview-5.2.3/lib/assets/compiled
+  /var/lib/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/rafael/Documentos/Desenvolvimento/ruby-vue/node_modules):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/assets/javascripts/application.js:13
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___256468274791454195_70264953384220'
+Started GET "/people" for 127.0.0.1 at 2019-10-01 00:15:17 -0300
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.1ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:15
+  Rendered people/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 49ms (Views: 47.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-10-01 00:16:52 -0300
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:15
+  Rendered people/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 36ms (Views: 32.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2019-10-01 00:17:03 -0300
+Processing by PeopleController#new as HTML
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (140.4ms)
+  Rendered people/new.html.erb within layouts/application (150.5ms)
+Completed 200 OK in 278ms (Views: 165.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-10-01 00:17:05 -0300
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:15
+  Rendered people/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.2ms)
+
+
